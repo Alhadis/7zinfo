@@ -1,0 +1,21 @@
+# ID	Name	Comment
+VT_BOOL	Boolean	
+VT_BSTR	Binary string	
+VT_CY	Cylinder	? (Assumed)
+VT_DATE	Date	
+VT_EMPTY	Empty	
+VT_ERROR		
+VT_FILETIME	File timestamp	UTC
+VT_I1	Int64 × 1	
+VT_I2	Int64 × 2	
+VT_I4	Int64 × 4	
+VT_I8	Int64 × 8	
+VT_INT	Int64	
+VT_NULL	Null	
+VT_R4	Real (32-bit)	
+VT_R8	Real (64-bit)	
+VT_UI1	UInt32 × 1	
+VT_UI2	UInt32 × 2	
+VT_UI4	UInt32 × 4	
+VT_UI8	UInt32 × 8	
+VT_UINT	UInt32	

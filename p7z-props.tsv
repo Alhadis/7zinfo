@@ -1,0 +1,104 @@
+# ID	Variable_type	Label ID	Label	Comments
+kpidNoProperty	VT_EMPTY			
+kpidMainSubfile	VT_UI4			
+kpidHandlerItemIndex	VT_UI4			
+kpidPath	VT_BSTR	IDS_PROP_PATH	Path	
+kpidName	VT_BSTR	IDS_PROP_NAME	Name	
+kpidExtension	VT_BSTR	IDS_PROP_EXTENSION	Extension	
+kpidIsDir	VT_BOOL	IDS_PROP_IS_FOLDER	Folder	
+kpidSize	VT_UI8	IDS_PROP_SIZE	Size	
+kpidPackSize	VT_UI8	IDS_PROP_PACKED_SIZE	Packed Size	
+kpidAttrib	VT_UI4	IDS_PROP_ATTRIBUTES	Attributes	
+kpidCTime	VT_FILETIME	IDS_PROP_CTIME	Created	
+kpidATime	VT_FILETIME	IDS_PROP_ATIME	Accessed	
+kpidMTime	VT_FILETIME	IDS_PROP_MTIME	Modified	
+kpidSolid	VT_BOOL	IDS_PROP_SOLID	Solid	
+kpidCommented	VT_BOOL	IDS_PROP_C0MMENTED	Commented	
+kpidEncrypted	VT_BOOL	IDS_PROP_ENCRYPTED	Encrypted	
+kpidSplitBefore	VT_BOOL	IDS_PROP_SPLIT_BEFORE	Split Before	
+kpidSplitAfter	VT_BOOL	IDS_PROP_SPLIT_AFTER	Split After	
+kpidDictionarySize	VT_UI4	IDS_PROP_DICTIONARY_SIZE	Dictionary	
+kpidCRC	VT_UI4	IDS_PROP_CRC	CRC	
+kpidType	VT_BSTR	IDS_PROP_FILE_TYPE	Type	
+kpidIsAnti	VT_BOOL	IDS_PROP_ANTI	Anti	
+kpidMethod	VT_BSTR	IDS_PROP_METHOD	Method	
+kpidHostOS	VT_BSTR	IDS_PROP_HOST_OS	Host OS	
+kpidFileSystem	VT_BSTR	IDS_PROP_FILE_SYSTEM	File System	
+kpidUser	VT_BSTR	IDS_PROP_USER	User	
+kpidGroup	VT_BSTR	IDS_PROP_GROUP	Group	
+kpidBlock	VT_UI8	IDS_PROP_BLOCK	Block	
+kpidComment	VT_BSTR	IDS_PROP_COMMENT	Comment	
+kpidPosition	VT_UI8	IDS_PROP_POSITION	Position	
+kpidPrefix	VT_BSTR	IDS_PROP_PREFIX	Path Prefix	
+kpidNumSubDirs	VT_UI8	IDS_PROP_FOLDERS	Folders	
+kpidNumSubFiles	VT_UI8	IDS_PROP_FILES	Files	
+kpidUnpackVer	VT_BSTR	IDS_PROP_VERSION	Version	Or VT_UI8 kpidUnpackVer
+kpidVolume	VT_UI4	IDS_PROP_VOLUME	Volume	Or VT_UI8 kpidVolume
+kpidIsVolume	VT_BOOL	IDS_PROP_IS_VOLUME	Multivolume	
+kpidOffset	VT_UI8	IDS_PROP_OFFSET	Offset	
+kpidLinks	VT_UI8	IDS_PROP_LINKS	Links	
+kpidNumBlocks	VT_UI8	IDS_PROP_NUM_BLOCKS	Blocks	
+kpidNumVolumes	VT_UI8	IDS_PROP_NUM_VOLUMES	Volumes	
+kpidTimeType	VT_UI4			
+kpidBit64	VT_BOOL	IDS_PROP_BIT64	64-bit	
+kpidBigEndian	VT_BOOL	IDS_PROP_BIG_ENDIAN	Big-endian	
+kpidCpu	VT_BSTR	IDS_PROP_CPU	CPU	
+kpidPhySize	VT_UI8	IDS_PROP_PHY_SIZE	Physical Size	
+kpidHeadersSize	VT_UI8	IDS_PROP_HEADERS_SIZE	Headers Size	
+kpidChecksum	VT_UI4	IDS_PROP_CHECKSUM	Checksum	kpidChecksum
+kpidCharacts	VT_BSTR	IDS_PROP_CHARACTS	Characteristics	
+kpidVa	VT_UI8	IDS_PROP_VA	Virtual Address	
+kpidId	VT_BSTR	IDS_PROP_ID	ID	Or VT_UI8 kpidId
+kpidShortName	VT_BSTR	IDS_PROP_SHORT_NAME	Short Name	
+kpidCreatorApp	VT_BSTR	IDS_PROP_CREATOR_APP	Creator Application	
+kpidSectorSize	VT_UI4	IDS_PROP_SECTOR_SIZE	Sector Size	
+kpidPosixAttrib	VT_UI4	IDS_PROP_POSIX_ATTRIB	Mode	
+kpidSymLink	VT_BSTR	IDS_PROP_SYM_LINK	Symbolic Link	
+kpidError	VT_BSTR	IDS_PROP_ERROR	Error	
+kpidTotalSize	VT_UI8	IDS_PROP_TOTAL_SIZE	Total Size	
+kpidFreeSpace	VT_UI8	IDS_PROP_FREE_SPACE	Free Space	
+kpidClusterSize	VT_UI4	IDS_PROP_CLUSTER_SIZE	Cluster Size	
+kpidVolumeName	VT_BSTR	IDS_PROP_VOLUME_NAME	Label	
+kpidLocalName	VT_BSTR	IDS_PROP_LOCAL_NAME	Local Name	
+kpidProvider	VT_BSTR	IDS_PROP_PROVIDER	Provider	
+kpidNtSecure	VT_BSTR	IDS_PROP_NT_SECURITY	NT Security	kpidNtSecure
+kpidIsAltStream	VT_BOOL	IDS_PROP_ALT_STREAM	Alternate Stream	
+kpidIsAux	VT_BOOL	IDS_PROP_AUX	Aux	
+kpidIsDeleted	VT_BOOL	IDS_PROP_DELETED	Deleted	
+kpidIsTree	VT_BOOL	IDS_PROP_IS_TREE	Is Tree	
+kpidSha1	VT_BSTR	IDS_PROP_SHA1	SHA-1	SHA-1
+kpidSha256	VT_BSTR	IDS_PROP_SHA256	SHA-256	SHA-256
+kpidErrorType	VT_BSTR	IDS_PROP_ERROR_TYPE	Error Type	
+kpidNumErrors	VT_UI8	IDS_PROP_NUM_ERRORS	Errors	
+kpidErrorFlags	VT_UI4	IDS_PROP_ERROR_FLAGS	Errors	
+kpidWarningFlags	VT_UI4	IDS_PROP_WARNING_FLAGS	Warnings	
+kpidWarning	VT_BSTR	IDS_PROP_WARNING	Warning	
+kpidNumStreams	VT_UI8	IDS_PROP_NUM_STREAMS	Streams	
+kpidNumAltStreams	VT_UI8	IDS_PROP_NUM_ALT_STREAMS	Alternate Streams	
+kpidAltStreamsSize	VT_UI8	IDS_PROP_ALT_STREAMS_SIZE	Alternate Streams Size	
+kpidVirtualSize	VT_UI8	IDS_PROP_VIRTUAL_SIZE	Virtual Size	
+kpidUnpackSize	VT_UI8	IDS_PROP_UNPACK_SIZE	Unpack Size	
+kpidTotalPhySize	VT_UI8	IDS_PROP_TOTAL_PHY_SIZE	Total Physical Size	
+kpidVolumeIndex	VT_UI8	IDS_PROP_VOLUME_INDEX	Volume Index	
+kpidSubType	VT_BSTR	IDS_PROP_SUBTYPE	SubType	
+kpidShortComment	VT_BSTR	IDS_PROP_SHORT_COMMENT	Short Comment	
+kpidCodePage	VT_BSTR	IDS_PROP_CODE_PAGE	Code Page	
+kpidIsNotArcType	VT_BOOL	IDS_PROP_IS_NOT_ARC_TYPE	Is not archive type	
+kpidPhySizeCantBeDetected	VT_BOOL	IDS_PROP_PHY_SIZE_CANT_BE_DETECTED	Physical Size can't be detected	
+kpidZerosTailIsAllowed	VT_BOOL	IDS_PROP_ZEROS_TAIL_IS_ALLOWED	Zeros Tail Is Allowed	
+kpidTailSize	VT_UI8	IDS_PROP_TAIL_SIZE	Tail Size	
+kpidEmbeddedStubSize	VT_UI8	IDS_PROP_EMB_STUB_SIZE	Embedded Stub Size	
+kpidNtReparse	VT_BSTR	IDS_PROP_NT_REPARSE	Link	kpidNtReparse
+kpidHardLink	VT_BSTR	IDS_PROP_HARD_LINK	Hard Link	
+kpidINode	VT_UI8	IDS_PROP_INODE	iNode	
+kpidStreamId	VT_UI8	IDS_PROP_STREAM_ID	Stream ID	
+kpidReadOnly	VT_BOOL	IDS_PROP_READ_ONLY	Read-only	
+kpidOutName	VT_BSTR	IDS_PROP_OUT_NAME	Out Name	
+kpidCopyLink	VT_BSTR	IDS_PROP_COPY_LINK	Copy Link	
+kpidArcFileName	VT_BSTR	IDS_PROP_ARC_FILE_NAME	ArcFileName	
+kpidIsHash	VT_BOOL	IDS_PROP_IS_HASH	IsHash	
+kpidChangeTime	VT_FILETIME	IDS_PROP_CHANGE_TIME	Metadata Changed	kpidChangeTime
+kpidUserId	VT_UI4	IDS_PROP_USER_ID	User ID	
+kpidGroupId	VT_UI4	IDS_PROP_GROUP_ID	Group ID	
+kpidDeviceMajor	VT_UI4	IDS_PROP_DEVICE_MAJOR	Device Major	
+kpidDeviceMinor	VT_UI4	IDS_PROP_DEVICE_MINOR	Device Minor	kpidDeviceMinor
