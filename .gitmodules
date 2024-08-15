@@ -1,0 +1,3 @@
+[submodule "p7zip"]
+	path = p7zip
+	url = git@github.com:p7zip-project/p7zip.git
