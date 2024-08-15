@@ -1,0 +1,102 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use autodie;
+use v5.14;
+use utf8;
+$| = 1;
+
+use warnings  qw< FATAL utf8 >;
+use open      qw< :std :utf8 >;
+use charnames qw< :full >;
+use feature   qw< say unicode_strings >;
+
+use Cwd qw< realpath >;
+use File::Basename qw< basename >;
+use File::Spec::Functions;
+use Data::Dumper;
+use Getopt::Long qw< :config bundling_values >;
+
+END { close STDOUT }
+
+# Quote argument for safely passing to a shell command.
+sub sq {
+	local ($_) = @_;
+	$^O eq "MSWin32" ? s|^-|.\\-| : s|^-|./-| if defined $_[1] && !!$_[1];
+	s/'/'\\''/g;
+	s/^|$/'/g;
+	return $_;
+}
+
+# Execute an external command and return its output
+sub cmd {
+	my ($cmd, @args) = @_;
+	local $_ = `$cmd @args`;
+
+	# Handle error conditions
+	if($? == -1){
+		say STDERR "Failed to execute command “$cmd”: $!";
+		exit 1;
+	}
+	elsif($? & 127){
+		printf STDERR "Command “$cmd” killed by signal %d", $? & 127;
+		print ' (core dumped)' if $? & 128;
+		print "\n";
+		exit 1;
+	}
+	elsif($? > 0){
+		printf STDERR "Command “$cmd” exited with status %d\n", $? >> 8;
+		exit 1;
+	}
+	return $_;
+}
+
+# Parse a line-oriented listing of record blocks
+sub parse_records {
+	my @results = ();
+	(my $input = $_[0]) =~ s/\A\s+|\s+\Z//g;
+	foreach(split /\R\h*\R/, $input){
+		my %entry = m/^([^\s=][^=]*) = *((?:\S.*)?)$/gm;
+		push(@results, \%entry);
+	}
+	return @results;
+}
+
+# Handle options
+my $pass = "";
+GetOptions("p|password:s" => \$pass);
+$pass = $pass ? sq $pass : " ''";
+
+# Sanitise filename and verify read access
+my ($file) = @ARGV;
+die "No such file: “$file”"      unless -f $file;
+die "Permission denied: “$file”" unless -r $file;
+$file = sq $file, 1;
+
+# Generate listing
+my $listing = cmd "7z", "l", "-p$pass", "-slt", $file;
+if($listing =~ m{
+	^ \s*
+	(?<header>  \S .*?) \R\h*\R -{1,3} \R
+	(?<archive> \S .*?) \R\h*\R -{4,}  \R
+	(?<listing> .*? \S)
+	\s* $
+}xs){
+	my $header  = $+{header};
+	my $archive = $+{archive};
+	my $listing = $+{listing};
+	($archive) = parse_records $archive;
+	my @files  = parse_records $listing;
+	say Dumper({
+		header  => $header,
+		archive => $archive,
+		files   => \@files,
+	});
+}
+
+# This shouldn't happen, but if it does, it means the format of
+# `7z l -slt` has changed unexpectedly (and probably needlessly).
+else{
+	printf STDERR "Syntax error: header/body divider not found!\n";
+	exit 2;
+}
